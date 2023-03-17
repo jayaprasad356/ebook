@@ -9,7 +9,7 @@
 
 
     <application
-        android:name=".helper.ApiConfig"
+        android:name="com.greymatterworks.ebook.helper.ApiConfig"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -25,7 +25,7 @@
             android:theme="@style/Base.Theme.AppCompat" />
 
         <activity
-            android:name=".DownloadpdfActivity"
+            android:name="com.greymatterworks.ebook.DownloadpdfActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -33,14 +33,14 @@
 
         </activity>
         <activity
-            android:name=".LoadingActivity"
+            android:name="com.greymatterworks.ebook.LoadingActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".SplashscreenActivity"
+            android:name="com.greymatterworks.ebook.SplashscreenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -52,56 +52,56 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".PaymentActivity"
+            android:name="com.greymatterworks.ebook.PaymentActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".BookDetailsActivity"
+            android:name="com.greymatterworks.ebook.BookDetailsActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".PdfViewActivity"
+            android:name="com.greymatterworks.ebook.PdfViewActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".ReadViewActivity"
+            android:name="com.greymatterworks.ebook.ReadViewActivity"
             android:exported="true">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".ProfileActivity"
+            android:name="com.greymatterworks.ebook.ProfileActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".LoginActivity"
+            android:name="com.greymatterworks.ebook.LoginActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".HomeActivity"
+            android:name="com.greymatterworks.ebook.HomeActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".PaymentStatusActivity"
+            android:name="com.greymatterworks.ebook.PaymentStatusActivity"
             android:exported="true">
 
             <meta-data
@@ -109,7 +109,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name="com.greymatterworks.ebook.MainActivity"
             android:exported="true">
             <meta-data
                 android:name="android.app.lib_name"

@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.ebook'
+    namespace 'com.greymatterworks.ebook'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.ebook"
+        applicationId "com.greymatterworks.ebook"
         minSdk 21
         targetSdk 33
         versionCode 1
