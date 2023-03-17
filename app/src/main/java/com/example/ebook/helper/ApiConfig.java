@@ -173,7 +173,7 @@ public class ApiConfig extends Application {
         ApiConfig.getInstance().getRequestQueue().getCache().clear();
         ApiConfig.getInstance().addToRequestQueue(stringRequest);
     }
-    public static void RequestToVolley(final VolleyCallback callback, final Activity activity, final String url, final Map<String, String> params, final Map<String, String> fileParams) {
+    public static void RequestToVolleyMulti(final VolleyCallback callback, final Activity activity, final String url, final Map<String, String> params, final Map<String, String> fileParams) {
         if(isConnected(activity)) {
             VolleyMultiPartRequest multipartRequest = new VolleyMultiPartRequest(url,
                     response -> callback.onSuccess(true, response),

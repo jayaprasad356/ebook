@@ -25,7 +25,7 @@ public class PaymentActivity extends AppCompatActivity {
     CheckBox checkboxGpay, checkboxPaytm, checkboxPhonepe;
     ImageButton imageButton;
     TextView textPrice;
-
+    String price;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -45,6 +45,7 @@ public class PaymentActivity extends AppCompatActivity {
         imageButton= findViewById(R.id.imageButton);
         textPrice = findViewById(R.id.textPrice);
 
+        price = getIntent().getStringExtra("price");
         imageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -174,7 +175,7 @@ public class PaymentActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // open app
                 String upiId = "6382088746@paytm"; // replace with your UPI ID
-                String amount = "10.00"; // replace with the transaction amount
+                String amount =price; // replace with the transaction amount
 
                // open gpay
 
