@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pay to:"
+        android:textSize="@dimen/_12sdp" />
+
+    <TextView
+        android:id="@+id/UPI_ID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="@dimen/_16sdp" />
+
+    <TextView
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Coipied"
+        android:textColor="@color/green"
+        android:textSize="@dimen/_10sdp"
+        android:drawableTint="@color/green"
+        android:drawableLeft="@drawable/ic_baseline_check_24"
+        android:textStyle="bold"
+        android:drawablePadding="@dimen/_10sdp"
+        android:gravity="center"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_marginTop="@dimen/_10sdp"
+        app:cornerRadius="@dimen/_10sdp"
+        android:layout_margin="10dp"
+        android:id="@+id/openappbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Open Gpay to to pay 30"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:layout_gravity="center"
+        android:padding="@dimen/_14sdp"
+        android:backgroundTint="@color/colorPrimary"
+        />
+
+
+
+</LinearLayout>

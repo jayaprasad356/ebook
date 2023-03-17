@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/_10sdp"
+        app:cardElevation="@dimen/_5sdp"
+        android:layout_margin="@dimen/_10sdp"
+        >
+
+
+
+        <TextView
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Read"
+            android:padding="@dimen/_4sdp"
+            android:background="@drawable/bg_coner"
+            android:textColor="@color/white"
+            />
+
+
+        <LinearLayout
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_14sdp"
+            android:orientation="vertical"
+            >
+
+
+
+
+
+            <androidx.cardview.widget.CardView
+            android:layout_marginBottom="@dimen/_8sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/_10sdp"
+            >
+
+
+                <ImageView
+                    android:scaleType="fitXY"
+                    android:id="@+id/image"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="@dimen/_100sdp" />
+
+            </androidx.cardview.widget.CardView>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+
+            <TextView
+                android:id="@+id/tvBookName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DBMS"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="@dimen/_12sdp"
+                />
+
+            <TextView
+                android:layout_alignParentRight="true"
+                android:id="@+id/tvRegulation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="R - 2017"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_10sdp"
+                />
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/tvcode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CS7012"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"
+                />
+
+
+            <TextView
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:id="@+id/tvPublication"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Technical Publication"
+                android:textSize="@dimen/_10sdp"
+                />
+
+
+
+
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+</RelativeLayout>
