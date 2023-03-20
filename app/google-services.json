@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "811083729673",
-    "project_id": "ebook-1d307",
-    "storage_bucket": "ebook-1d307.appspot.com"
+    "project_number": "690968990087",
+    "project_id": "ebookgmw",
+    "storage_bucket": "ebookgmw.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:811083729673:android:c33212a46a027e2139e1d8",
+        "mobilesdk_app_id": "1:690968990087:android:aa9e525121ff4ed00a4322",
         "android_client_info": {
           "package_name": "com.greymatterworks.ebook"
         }
       },
       "oauth_client": [
         {
-          "client_id": "811083729673-g4nbu583s5as5d0htrq3cp4b8hs7scii.apps.googleusercontent.com",
+          "client_id": "690968990087-tjmbmddlkoh5juqlpk9aqtb6jmef294u.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyA3TA7tWyafONeCfhAU-YLotQKMw_UdYaE"
+          "current_key": "AIzaSyAVyxMnYlhtK_EV5imXGUkFZdBP83W9_q4"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "811083729673-g4nbu583s5as5d0htrq3cp4b8hs7scii.apps.googleusercontent.com",
+              "client_id": "690968990087-tjmbmddlkoh5juqlpk9aqtb6jmef294u.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
