@@ -95,6 +95,7 @@ public class PaymentStatusActivity extends AppCompatActivity {
         code = getIntent().getStringExtra("code");
         publication = getIntent().getStringExtra("publication");
         regulation = getIntent().getStringExtra("regulation");
+        booklist();
 
     }
 
