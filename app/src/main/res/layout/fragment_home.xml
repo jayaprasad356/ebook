@@ -97,6 +97,7 @@
                     android:layout_height="wrap_content"
                     android:hint="book name or Subject code"
                     android:background="@null"
+                    android:maxLines="1"
                     android:textColor="@color/colorPrimary"
                     android:layout_centerVertical="true"
                     />

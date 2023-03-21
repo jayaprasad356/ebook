@@ -22,24 +22,33 @@ import okhttp3.Response;
 
 public class DownloadpdfActivity extends AppCompatActivity {
 
-    private static final String DOWNLOAD_URL = "https://ebooks.graymatterworks.com/storage/app/public/book/book-pdf/2023-03-16-6412b2664cfe2.pdf";
+    private  String DOWNLOAD_URL = "https://ebooks.graymatterworks.com/storage/app/public/book/book-pdf/2023-03-16-6412b2664cfe2.pdf";
+    String bookid,document,name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_downloadpdf);
+        bookid = getIntent().getStringExtra("bookId");
+        name = getIntent().getStringExtra("name");
+        document = getIntent().getStringExtra("document");
+        DOWNLOAD_URL = document;
 
-        Button downloadButton = findViewById(R.id.download_button);
-        downloadButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                downloadAndOpenPDF(DOWNLOAD_URL);
-            }
-        });
+        downloadAndOpenPDF(DOWNLOAD_URL);
+
+//        Button downloadButton = findViewById(R.id.download_button);
+//
+//        downloadButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//            }
+//        });
     }
 
     private void downloadAndOpenPDF(String url) {
-        String fileName = "my_fil1.pdf";
+
+
+        String fileName = name+bookid+".pdf";
         File pdfFile = new File(getCacheDir(), fileName);
 
 
@@ -103,6 +112,7 @@ public class DownloadpdfActivity extends AppCompatActivity {
         Intent intent = new Intent(this, PdfViewActivity.class);
         intent.putExtra("file_path", pdfFile.getAbsolutePath());
         startActivity(intent);
+        finish();
     }
 
 }

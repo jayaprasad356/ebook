@@ -48,6 +48,7 @@ public class MycartAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
         holder.tvcode.setText(myCart.getSub_name());
         holder.tvPublication.setText(myCart.getPublication());
         holder.tvRegulation.setText(myCart.getRegulation());
+        holder.tvPrice.setText("₹ "+myCart.getPrice());
 
         Glide.with(activity).load(myCart.getImage()).into(holder.image);
 
@@ -84,12 +85,13 @@ public class MycartAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
     static class ExploreItemHolder extends RecyclerView.ViewHolder {
 
         final ImageView image;
-        final TextView tvBookName,tvcode,tvPublication,tvRegulation;
+        final TextView tvBookName,tvcode,tvPublication,tvRegulation,tvPrice;
         public ExploreItemHolder(@NonNull View itemView) {
             super(itemView);
             image = itemView.findViewById(R.id.image);
             tvBookName = itemView.findViewById(R.id.tvBookName);
             tvcode = itemView.findViewById(R.id.tvcode);
+            tvPrice= itemView.findViewById(R.id.tvPrice);
             tvPublication = itemView.findViewById(R.id.tvPublication);
             tvRegulation = itemView.findViewById(R.id.tvRegulation);
 

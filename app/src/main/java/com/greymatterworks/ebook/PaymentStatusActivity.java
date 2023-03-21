@@ -17,6 +17,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.canhub.cropper.CropImage;
 import com.greymatterworks.ebook.helper.ApiConfig;
 import com.greymatterworks.ebook.helper.Constant;
@@ -78,7 +79,6 @@ public class PaymentStatusActivity extends AppCompatActivity {
             order(bookid);
         });
 
-        tvPrice.setText("₹ " + getIntent().getStringExtra("price"));
 
         tvHelpBtn.setOnClickListener(v -> {
 
@@ -87,14 +87,8 @@ public class PaymentStatusActivity extends AppCompatActivity {
             startActivity(intent);
 
         });
-        bookid = getIntent().getStringExtra("id");
-        price = getIntent().getStringExtra("price");
-        name = getIntent().getStringExtra("name");
-        sub_name = getIntent().getStringExtra("sub_name");
-        image = getIntent().getStringExtra("image");
-        code = getIntent().getStringExtra("code");
-        publication = getIntent().getStringExtra("publication");
-        regulation = getIntent().getStringExtra("regulation");
+        bookid = getIntent().getStringExtra("bookId");
+
         booklist();
 
     }
@@ -118,20 +112,19 @@ public class PaymentStatusActivity extends AppCompatActivity {
                     if (jsonObject.getBoolean(Constant.SUCCESS)) {
 
                         Toast.makeText(activity, "" + jsonObject.getString(Constant.MESSAGE), Toast.LENGTH_SHORT).show();
-                        iv1.setBackgroundColor(activity.getColor(R.color.green));
-                        iv2.setBackgroundColor(activity.getColor(R.color.green));
+                        iv1.setBackground(getDrawable(R.drawable.ic_baseline_success));
                         divider1.setBackgroundColor(activity.getColor(R.color.green));
 
-                        Intent intent = new Intent(activity, PaymentStatusActivity.class);
-                        intent.putExtra("id", bookid);
-                        intent.putExtra("price", price);
-                        intent.putExtra("name", name);
-                        intent.putExtra("sub_name", sub_name);
-                        intent.putExtra("image", image);
-                        intent.putExtra("code", code);
-                        intent.putExtra("publication", publication);
-                        intent.putExtra("regulation", regulation);
-                        startActivity(intent);
+//                        Intent intent = new Intent(activity, PaymentStatusActivity.class);
+//                        intent.putExtra("id", bookid);
+//                        intent.putExtra("price", price);
+//                        intent.putExtra("name", name);
+//                        intent.putExtra("sub_name", sub_name);
+//                        intent.putExtra("image", image);
+//                        intent.putExtra("code", code);
+//                        intent.putExtra("publication", publication);
+//                        intent.putExtra("regulation", regulation);
+//                        startActivity(intent);
 
 
                     } else {
@@ -241,9 +234,36 @@ public class PaymentStatusActivity extends AppCompatActivity {
                             JSONObject jsonObject1 = jsonArray.getJSONObject(i);
 
                             if (jsonObject1 != null) {
+                                String imageStatus = jsonObject1.getString("image_status");
+                                String paymentStatus = jsonObject1.getString("payment_status");
+                                String document = jsonObject1.getString("document");
+                                String name = jsonObject1.getString("name");
+                                String price = jsonObject1.getString("price");
+                                String book_id = jsonObject1.getString("book_id");
+                                String proof_image = jsonObject1.getString("proof_image");
+                                tvPrice.setText("₹ " +price);
 
-                                MyBooklist group = g.fromJson(jsonObject1.toString(), MyBooklist.class);
-                                myBooklists.add(group);
+                                if (paymentStatus.equals("1")) {
+                                    iv2.setBackground(getDrawable(R.drawable.ic_baseline_success));
+                                    divider2.setBackgroundColor(activity.getColor(R.color.green));
+                                    iv3.setBackground(getDrawable(R.drawable.ic_baseline_success));
+                                    iv1.setBackground(getDrawable(R.drawable.ic_baseline_success));
+                                    divider1.setBackgroundColor(activity.getColor(R.color.green));
+                                    Intent intent = new Intent(activity, DownloadpdfActivity.class);
+                                    intent.putExtra("document", document);
+                                    intent.putExtra("name", name);
+                                    intent.putExtra("bookId", book_id);
+                                    startActivity(intent);
+                                    finish();
+                                }
+                                if (imageStatus.equals("1")) {
+                                    iv1.setBackground(getDrawable(R.drawable.ic_baseline_success));
+                                    divider1.setBackgroundColor(activity.getColor(R.color.green));
+                                    Glide.with(activity).load(proof_image).into(ivImage);
+
+                                    uploadImage.setEnabled(false);
+                                }
+
 
                             } else {
                                 break;

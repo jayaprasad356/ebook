@@ -1,7 +1,39 @@
 package com.greymatterworks.ebook.model;
 
 public class MyBooklist {
-    String id,name,sub_name,sub_code,department,year,publication,regulation,price,book_image,image,document,status;
+    String id;
+    String name;
+    String sub_name;
+    String sub_code;
+    String department;
+    String year;
+    String publication;
+    String regulation;
+    String price;
+    String book_image;
+    String image;
+    String document;
+    String status;
+    String book_id;
+
+    public String getPayment_status() {
+        return payment_status;
+    }
+
+    public void setPayment_status(String payment_status) {
+        this.payment_status = payment_status;
+    }
+
+    String payment_status;
+
+    public String getBook_id() {
+        return book_id;
+    }
+
+    public void setBook_id(String book_id) {
+        this.book_id = book_id;
+    }
+
     public MyBooklist(){
 
     }

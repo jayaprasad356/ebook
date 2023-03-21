@@ -14,6 +14,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.greymatterworks.ebook.DownloadpdfActivity;
+import com.greymatterworks.ebook.PaymentStatusActivity;
 import com.greymatterworks.ebook.PdfViewActivity;
 import com.greymatterworks.ebook.R;
 import com.greymatterworks.ebook.model.MyBooklist;
@@ -54,13 +56,20 @@ public class MyBookListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(activity, PdfViewActivity.class);
-                intent.putExtra("id", myBooklist.getId());
-                intent.putExtra("name", myBooklist.getSub_name());
-                intent.putExtra("document", myBooklist.getDocument());
+                if (myBooklist.getPayment_status().equals("1")){
+                    Intent intent = new Intent(activity, DownloadpdfActivity.class);
+                    intent.putExtra("bookId", myBooklist.getBook_id());
+                    intent.putExtra("name", myBooklist.getName());
+                    intent.putExtra("document", myBooklist.getDocument());
+                    activity.startActivity(intent);
+                }else {
+                    Intent intent = new Intent(activity, PaymentStatusActivity.class);
+                    intent.putExtra("bookId", myBooklist.getBook_id());
+//                intent.putExtra("name", myBooklist.getSub_name());
+//                intent.putExtra("document", myBooklist.getDocument());
 
-                activity.startActivity(intent);
-
+                    activity.startActivity(intent);
+                }
             }
         });
 
