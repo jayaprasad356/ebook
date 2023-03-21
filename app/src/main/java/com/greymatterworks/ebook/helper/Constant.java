@@ -11,6 +11,8 @@ public class Constant {
     public static final String MYBOOKS = BaseUrl + "mybooks";
     public static final String CART_LIST = BaseUrl + "cartlist";
     public static final String ADD_TO_CART = BaseUrl + "booklist/add-cart";
+    public static final String SEARCHBOOKS = BaseUrl + "booklist/searchbooks";
+
 
     public static final String REMOVE_FROM_CART = BaseUrl + "booklist/delete-cart";
     public static final String ORDER = BaseUrl + "order";
