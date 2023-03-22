@@ -38,7 +38,6 @@ public class LoadingActivity extends AppCompatActivity {
 
 
         bookid = getIntent().getStringExtra("id");
-        Toast.makeText(activity, ""+bookid, Toast.LENGTH_SHORT).show();
         String userid = session.getData(Constant.USER_ID);
         price = getIntent().getStringExtra("price");
         name = getIntent().getStringExtra("name");
@@ -70,7 +69,7 @@ public class LoadingActivity extends AppCompatActivity {
 
 
             }
-        },10000);
+        },5000);
     }
 
     private void order(String bookid) {
@@ -86,11 +85,8 @@ public class LoadingActivity extends AppCompatActivity {
                     JSONObject jsonObject = new JSONObject(response);
                     if (jsonObject.getBoolean(Constant.SUCCESS)) {
 
-                        Toast.makeText(activity, ""+jsonObject.getString(Constant.MESSAGE), Toast.LENGTH_SHORT).show();
-
-
                         Intent intent = new Intent(activity, PaymentStatusActivity.class);
-                        intent.putExtra("id", bookid);
+                        intent.putExtra("bookId", bookid);
                         intent.putExtra("price", price);
                         intent.putExtra("name", name);
                         intent.putExtra("sub_name", sub_name);
@@ -111,7 +107,7 @@ public class LoadingActivity extends AppCompatActivity {
 
                         if (jsonObject.getString(Constant.MESSAGE).equals("Book Already Purchased")){
                             Intent intent = new Intent(activity, PaymentStatusActivity.class);
-                            intent.putExtra("id", bookid);
+                            intent.putExtra("bookId", bookid);
                             intent.putExtra("price", price);
                             intent.putExtra("name", name);
                             intent.putExtra("sub_name", sub_name);

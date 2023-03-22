@@ -165,13 +165,13 @@ public class PaymentActivity extends AppCompatActivity {
         Button openappbutton = bottomSheet.findViewById(R.id.openappbutton);
         TextView UPI_ID = bottomSheet.findViewById(R.id.UPI_ID);
 
-        UPI_ID.setText("1234567890@paytm");
+        UPI_ID.setText("mmrtamil632000@okaxis");
 
         openappbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // open app
-                String upiId = "6382088746@paytm"; // replace with your UPI ID
+                String upiId = "mmrtamil632000@okaxis"; // replace with your UPI ID
                 String amount =price; // replace with the transaction amount
 
                // open gpay
@@ -210,14 +210,14 @@ public class PaymentActivity extends AppCompatActivity {
         Button openappbutton = bottomSheet.findViewById(R.id.openappbutton);
         TextView UPI_ID = bottomSheet.findViewById(R.id.UPI_ID);
 
-        UPI_ID.setText("1234567890@paytm");
+        UPI_ID.setText("mmrtamil632000@okaxis");
 
         openappbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // open app
                 String upiId = "6382088746@paytm"; // replace with your UPI ID
-                String amount = "10.00"; // replace with the transaction amount
+                String amount = price ; // replace with the transaction amount
 
                 Uri uri = Uri.parse("upi://pay").buildUpon()
                         .appendQueryParameter("pa", upiId)
@@ -258,14 +258,14 @@ public class PaymentActivity extends AppCompatActivity {
         Button openappbutton = bottomSheet.findViewById(R.id.openappbutton);
         TextView UPI_ID = bottomSheet.findViewById(R.id.UPI_ID);
 
-        UPI_ID.setText("1234567890@paytm");
+        UPI_ID.setText("mmrtamil632000@okaxis");
 
         openappbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // open app
-                String upiId = "6382088746@paytm"; // replace with your UPI ID
-                String amount = "10.00"; // replace with the transaction amount
+                String upiId = "mmrtamil632000@okaxis"; // replace with your UPI ID
+                String amount = price; // replace with the transaction amount
 
                 //open paytm
                 Uri uri = Uri.parse("upi://pay").buildUpon()

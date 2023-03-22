@@ -78,7 +78,7 @@ public class BookDetailsActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(activity, PaymentActivity.class);
+                Intent intent = new Intent(activity, LoadingActivity.class);
                 intent.putExtra("id", id);
                 intent.putExtra("name", name);
                 intent.putExtra("code", code);
@@ -87,7 +87,6 @@ public class BookDetailsActivity extends AppCompatActivity {
                 intent.putExtra("regulation", regulation);
                 intent.putExtra("image", image);
                 intent.putExtra("sub_name", sub_name);
-
                 startActivity(intent);
 
             }
