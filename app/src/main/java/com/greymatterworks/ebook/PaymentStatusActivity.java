@@ -6,6 +6,9 @@ import androidx.cardview.widget.CardView;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.content.ClipData;
+import android.content.ClipboardManager;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -49,6 +52,8 @@ public class PaymentStatusActivity extends AppCompatActivity {
     Uri imageUri;
     Button uploadImage;
     private static final int REQUEST_IMAGE_GALLERY = 2;
+    Button btnCopy;
+    TextView tvCopy;
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     @SuppressLint("MissingInflatedId")
@@ -61,6 +66,22 @@ public class PaymentStatusActivity extends AppCompatActivity {
         activity = this;
         session = new Session(activity);
 
+
+        btnCopy = findViewById(R.id.btnCopy);
+        tvCopy = findViewById(R.id.tvUpi);
+
+
+        btnCopy.setOnClickListener(v -> {
+
+            CharSequence text = tvCopy.getText();
+            ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
+            ClipData clip = ClipData.newPlainText("label", text);
+            clipboard.setPrimaryClip(clip);
+
+                });
+
+
+
         tvPrice = findViewById(R.id.tvPrice);
         cardView = findViewById(R.id.cardView);
         ivImage = findViewById(R.id.ivImage);
@@ -71,6 +92,9 @@ public class PaymentStatusActivity extends AppCompatActivity {
         divider2 = findViewById(R.id.divider2);
         tvHelpBtn = findViewById(R.id.tv_help_btn);
         uploadImage = findViewById(R.id.upload_image);
+
+        bookid = getIntent().getStringExtra("bookId");
+
 
         cardView.setOnClickListener(v -> {
             pickImageFromGallery();
@@ -87,7 +111,6 @@ public class PaymentStatusActivity extends AppCompatActivity {
             startActivity(intent);
 
         });
-        bookid = getIntent().getStringExtra("bookId");
 
         booklist();
 

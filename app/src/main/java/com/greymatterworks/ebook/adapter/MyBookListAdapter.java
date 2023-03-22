@@ -53,25 +53,39 @@ public class MyBookListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
         holder.tvRegulation.setText(myBooklist.getRegulation());
         Glide.with(activity).load(myBooklist.getImage()).into(holder.image);
 
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (myBooklist.getPayment_status().equals("1")){
+
+
+
+        if (myBooklist.getPayment_status().equals("1")){
+            holder.itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
                     Intent intent = new Intent(activity, DownloadpdfActivity.class);
                     intent.putExtra("bookId", myBooklist.getBook_id());
                     intent.putExtra("name", myBooklist.getName());
                     intent.putExtra("document", myBooklist.getDocument());
                     activity.startActivity(intent);
-                }else {
+                }
+            });
+
+        }else {
+
+
+            holder.itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
                     Intent intent = new Intent(activity, PaymentStatusActivity.class);
                     intent.putExtra("bookId", myBooklist.getBook_id());
 //                intent.putExtra("name", myBooklist.getSub_name());
 //                intent.putExtra("document", myBooklist.getDocument());
 
                     activity.startActivity(intent);
+
                 }
-            }
-        });
+            });
+
+        }
+
 
 
 

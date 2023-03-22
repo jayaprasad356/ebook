@@ -68,14 +68,116 @@
     </RelativeLayout>
 
 
-    <RelativeLayout
-        android:layout_marginTop="@dimen/_30sdp"
+    <ScrollView
         android:layout_below="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="@dimen/_20sdp"
         >
 
+
+
+
+
+        <LinearLayout
+            android:background="@drawable/bg_coner"
+            android:backgroundTint="@color/colorAccent"
+            android:id="@+id/relativeLayout2"
+            android:padding="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:orientation="vertical"
+            >
+
+
+            <TextView
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sent Payment To :"
+                />
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:gravity="center"
+                >
+
+                <ImageView
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_28sdp"
+                    android:background="@drawable/gpaylogo"
+                    android:layout_centerVertical="true"
+                    />
+
+                <ImageView
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="@dimen/_58sdp"
+                    android:background="@drawable/phonepelogo"
+                    android:layout_centerVertical="true"
+                    />
+
+
+                <ImageView
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:background="@drawable/paytmlogo"
+                    android:layout_centerVertical="true"
+                    />
+
+            </LinearLayout>
+
+
+
+            <TextView
+                android:id="@+id/tvUpi"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="mmrtamil632000@okaxis"
+                />
+
+
+            <Button
+                android:id="@+id/btnCopy"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Copy Upi"
+                android:textAllCaps="false"
+                android:drawableLeft="@drawable/ic_baseline_content_copy_24"
+                android:drawableTint="@color/white"
+                />
+
+
+
+        </LinearLayout>
+
+
+
+
+
+
+
+        <RelativeLayout
+            android:layout_below="@+id/relativeLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
 
         <LinearLayout
@@ -90,7 +192,7 @@
                 android:id="@+id/iv1"
                 android:layout_width="@dimen/_30sdp"
                 android:layout_height="@dimen/_30sdp"
-                android:background="@drawable/ic_baseline_check_circle_24"
+                android:src="@drawable/ic_baseline_check_circle_24"
                 />
 
             <com.google.android.material.divider.MaterialDivider
@@ -109,7 +211,7 @@
                 android:id="@+id/divider2"
 
                 android:layout_width="@dimen/_2sdp"
-                android:layout_height="@dimen/_100sdp"
+                android:layout_height="@dimen/_96sdp"
                 android:layout_gravity="center"/>
 
 
@@ -258,6 +360,8 @@
         </LinearLayout>
 
 
+        </RelativeLayout>
+
 
 
 
@@ -265,5 +369,8 @@
 
 
     </RelativeLayout>
+
+
+    </ScrollView>
 
 </RelativeLayout>

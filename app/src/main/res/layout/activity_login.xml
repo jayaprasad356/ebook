@@ -43,7 +43,7 @@
           android:textAllCaps="false"
           android:padding="@dimen/_10sdp"
           android:backgroundTint="@color/colorPrimaryLight"
-          android:drawableLeft="@drawable/icon__google"
+          android:drawableLeft="@drawable/google_svg"
           android:drawablePadding="@dimen/_10sdp"
           android:layout_marginTop="@dimen/_30sdp"
           />
