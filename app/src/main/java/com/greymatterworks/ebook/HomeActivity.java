@@ -14,6 +14,7 @@ import android.widget.Toast;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.messaging.FirebaseMessaging;
+import com.greymatterworks.ebook.fragments.PublisherFragment;
 import com.greymatterworks.ebook.helper.Session;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
@@ -24,6 +25,8 @@ public class HomeActivity extends AppCompatActivity implements NavigationBarView
     BottomNavigationView bottomNavigationView;
     homeFragment homeFragment = new homeFragment();
     MybookFragment mybookFragment = new MybookFragment();
+    PublisherFragment publisherFragment = new PublisherFragment();
+
     MywatchlistFragment mywatchlistFragment = new MywatchlistFragment();
     Activity activity ;
     Session session ;
@@ -88,6 +91,9 @@ public class HomeActivity extends AppCompatActivity implements NavigationBarView
                 return true;
             case R.id.nav_book:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,mybookFragment).commit();
+                return true;
+            case R.id.navPublisher:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,publisherFragment).commit();
                 return true;
             case R.id.nav_watchlist:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,mywatchlistFragment).commit();

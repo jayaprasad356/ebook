@@ -15,6 +15,10 @@
 
 
     <color name="green">#4CAF50</color>
+    <color name="grey">#A7ACA7</color>
+    <color name="pink">#EC37D9</color>
+    <color name="sky">#E7F2F6</color>
+    <color name="title">#EC0707</color>
 
     <color name="colorAccent">#E0ECFF</color>
 

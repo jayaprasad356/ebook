@@ -60,6 +60,7 @@ dependencies {
     implementation 'com.github.CanHub:Android-Image-Cropper:3.1.2'
 
     implementation 'com.github.CanHub:Android-Image-Cropper:3.1.2'
+    implementation 'com.github.barteksc:android-pdf-viewer:2.8.2'
 
 
 

@@ -11,7 +11,10 @@
         android:id="@+id/nav_home"
         android:icon="@drawable/ic_home"
         android:title="@string/home" />
-
+    <item
+        android:id="@+id/navPublisher"
+        android:icon="@drawable/ic_fav"
+        android:title="@string/publisher" />
     <item
         android:id="@+id/nav_watchlist"
         android:icon="@drawable/ic_fav"
