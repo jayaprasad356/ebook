@@ -20,17 +20,40 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:background="@drawable/bg_coner_stroke"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:text=" Your Cash : 0"
+            android:paddingVertical="@dimen/_4sdp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12sdp"
+            android:layout_margin="@dimen/_10sdp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="@dimen/_20sdp"
-            android:text="Publish Your Own Books"
+            android:text="Publish Your Books"
             android:textColor="@color/white"
             android:textSize="@dimen/_24sdp"
+            android:textStyle="italic|bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:text="Get Cash and Withdral Instantly"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12sdp"
             android:textStyle="italic|bold" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_60sdp"
+            android:layout_marginTop="@dimen/_10sdp"
             android:orientation="horizontal"
             android:weightSum="3">
 
